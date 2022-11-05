@@ -1,14 +1,16 @@
-<h1 id="title">Test</h1>
-<div id="clk1" style="width: 90%;
-height: 200px;
-background-color: tomato;
-">X</div>
-<script>
-clk1.onclick = clk1.ontouchend = ()=>{
-title.innerHTML = Math.random().toFixed(3);
-clk1.style['background-color'] =
- ['tomato','red','yellow','black'][
-  Math.round(Math.random()*3)
- ];
-};
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PLGRN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="info">Red</div>
+  <div id="clk1"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>

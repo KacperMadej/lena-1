@@ -1,0 +1,18 @@
+#info {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    font-size: 14px;
+}
+
+#clk1 {
+    margin: auto;
+    width: 90%;
+    height: 250px;
+    border: 2px solid black;
+}
+
+body {
+    height: 100%;
+    background-color: purple;
+}
