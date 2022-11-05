@@ -1,0 +1,14 @@
+<h1 id="title">Test</h1>
+<div id="clk1" style="width: 90%;
+height: 200px;
+background-color: tomato;
+">X</div>
+<script>
+clk1.onclick = clk1.ontouchend = ()=>{
+title.innerHTML = Math.random().toFixed(3);
+clk1.style['background-color'] =
+ ['tomato','red','yellow','black'][
+  Math.round(Math.random()*3)
+ ];
+};
+</script>
