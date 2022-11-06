@@ -19,8 +19,7 @@ function opacities(color, opacity) {
 root.onclick = () => {
     const newColor = currColor = getColor();
     root.style['background-color'] = newColor;
-    root.style['border-color'] = opacities(newColor, 0.5) + ' black';
-    info.innerHTML = newColor + '_' + opacities(newColor, 0.5);
+    info.innerHTML = newColor;
 };
 
 // color saving
