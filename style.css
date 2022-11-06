@@ -17,8 +17,12 @@
 #list {
     margin: auto;
     width: 90%;
+    background-color:bisque;
+    height: 300px;
 }
 #save {
+    height: 50px;
+    width: 50px;
     border-radius: 50px;
     font-size: 22px;
     text-align: center;
