@@ -1,6 +1,8 @@
 const root = document.getElementById('clk1');
 const info = document.getElementById('info');
 
+let currColor = 'red';
+
 function getRand(max) {
     return Math.round(Math.random() * max);
 }
@@ -15,8 +17,19 @@ function opacities(color, opacity) {
 }
 
 root.onclick = () => {
-    const newColor = getColor();
+    const newColor = currColor = getColor();
     root.style['background-color'] = newColor;
     root.style['border-color'] = opacities(newColor, 0.5) + ' black';
     info.innerHTML = newColor + '_' + opacities(newColor, 0.5);
 };
+
+// color saving
+const save = document.getElementById('save');
+const list = document.getElementById('list');
+save.onclick = () => {
+    const node = document.createElement('div');
+    node.className = 'saved-color';
+    node.style['background-color'] = currColor;
+    node.innerHTML = currColor;
+    list.appendChild(node);
+}
