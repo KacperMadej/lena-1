@@ -11,7 +11,7 @@ function getColor() {
 
 function opacities(color, opacity) {
     const parts = color.split(/[()]/);
-    return `rgba(${parts[1]},${opacit})`;
+    return `rgba(${parts[1]},${opacity})`;
 }
 
 root.onclick = () => {
