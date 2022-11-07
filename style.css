@@ -10,6 +10,7 @@
     width: 90%;
     height: 250px;
     border-width: 2px;
+    border-style: solid;
     border-color: white black;
     background-color: red;
     border-radius: 30px;
@@ -18,7 +19,7 @@
 #list {
     margin: auto;
     width: 90%;
-    background-color:bisque;
+    background-color: white;
     height: 300px;
 }
 #save {
@@ -31,8 +32,8 @@
     background-color: white;
 }
 .saved-color {
-    display: inline;
-    width: 50px;
+    float: left;
+    width: 150px;
     height: 50px;
 }
 
