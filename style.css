@@ -19,7 +19,7 @@
 #list {
     margin: auto;
     width: 90%;
-    background: linear-gradient(90deg, red, black);
+    background: linear-gradient(90deg,red,black);
     height: auto;
 }
 .action-btn, #save {

@@ -1,5 +1,10 @@
-const root = document.getElementById('clk1');
-const info = document.getElementById('info');
+// 
+function get(id) {
+    return document.getElementById(id);
+}
+
+const root = get('clk1');
+const info = get('info');
 
 let currColor = 'red';
 
@@ -23,8 +28,8 @@ root.onclick = () => {
 };
 
 // color saving
-const save = document.getElementById('save');
-const list = document.getElementById('list');
+const save = get('save');
+const list = get('list');
 save.onclick = () => {
     const node = document.createElement('div');
     node.className = 'saved-color';
@@ -32,3 +37,25 @@ save.onclick = () => {
     node.innerHTML = currColor;
     list.appendChild(node);
 }
+
+// gradient making
+function setSide(isRight) {
+    const midPart = '90deg,'
+    const oldGrad = list.style['background'].split(midPart);
+    const colors = oldGrad[1].split(/[,)]/);
+
+    list.style['backgound'] = oldGrad[0] +
+        midPart +
+        (isRight ?
+            colors[0] + ',' + currColor :
+            currColor + ',' + colors[1]) +
+        ')';
+}
+
+const setLeft = get('setLeft');
+const setRight = get('setRight');
+[setLeft, setRight].forEach((elem, isRight) => {
+    elem.onclick = () => {
+        setSide(!!isRight);
+    };
+});
